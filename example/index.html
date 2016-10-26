@@ -8,24 +8,29 @@
 </head>
 <body>
 	<div class="content">
-		<div class="main-text">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore distinctio quis corporis similique harum suscipit voluptatum odio provident totam numquam accusantium, repellendus, aspernatur tempora omnis dolor eaque reprehenderit perspiciatis molestias.
-		</div>
+    <div class="demo">
+      <div class="text-wrapper">
+        <div class="main-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore distinctio quis corporis similique harum suscipit voluptatum odio provident totam numquam accusantium, repellendus, aspernatur tempora omnis dolor eaque reprehenderit perspiciatis molestias.
+        </div>
+
+        <div class="">
+          <input type="text">
+        </div>
+      </div>
+    </div>
 	</div>
 	<script src="http://localhost:35729/livereload.js"></script>
 	<script src="../lib/tinytyper.js"></script>
 	<script>
 		var el       = document.querySelector('.main-text')
 		var options  = {
-			text: '- Say hello to the robots...\n      - Hello world!',
+			text: '   Wake up Neo . . .\n            The Matrix has you',
       textSpeed: 95,
-      blinkSpeed: 0.04,
-      // staticCursor: true,
-      // staticText: true,
-      // cursor: '|',
+      blinkSpeed: 0.06
 		}
 
-		var instance = new tinytyper(el, options);
+		var instance = new tinytyper(el, options)
 	</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 {
   "name": "tinytyper",
   "version": "0.0.1",
-  "description": "Tiny library to create typing effect on specified text element",
+  "description": "A tiny library for creating typing effect on specified text element",
   "main": "lib/tinytyper.js",
   "devDependencies": {
     "babel": "6.3.13",
