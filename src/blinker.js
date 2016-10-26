@@ -26,9 +26,9 @@ window.requestAnimationFrame = requestAnimationFrame
  */
 export function fadeOut (el, speed, callback) {
   el.style.opacity = 1
-
   const fade = () => {
     if ((el.style.opacity -= speed) < 0) {
+      el.style.opacity = 0
       callback()
     } else {
       requestAnimationFrame(fade)
@@ -52,6 +52,7 @@ export function fadeIn (el, speed, callback) {
       el.style.opacity = val
       requestAnimationFrame(fade)
     } else {
+      el.style.opacity = 1
       callback()
     }
   }
