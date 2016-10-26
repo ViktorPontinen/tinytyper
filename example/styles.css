@@ -1,0 +1,7 @@
+.main-text {
+	font-family: 'Slabo 27px', serif;
+	font-size: 36px;
+	/*text-align: center;*/
+	margin: 30px auto;
+  transform: translate3d(0, 0, 0)
+}
