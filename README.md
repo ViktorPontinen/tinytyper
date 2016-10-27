@@ -1,5 +1,6 @@
 ## ⌨️  TinyTyper - tiny library to create typing effect on specified text element
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Build Status](https://travis-ci.org/lourenc/tinytyper.svg?branch=develop)](https://travis-ci.org/lourenc/tinytyper)
 
 #### Demo
 <img align="center" src="http://g.recordit.co/8MTkbe9Crg.gif">
