@@ -1,0 +1,24 @@
+{
+  "name": "tinytyper",
+  "description": "A tiny library for creating typing effect on specified text element",
+  "main": "lib/tinytyper.js",
+  "authors": [
+    "Korney Vasilchenko <starkkor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "typing",
+    "text",
+    "effect",
+    "cursor",
+    "blinking"
+  ],
+  "homepage": "https://github.com/lourenc/tinytyper",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
