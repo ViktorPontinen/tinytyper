@@ -6,6 +6,15 @@
 #### Demo
 <img align="center" src="http://g.recordit.co/8MTkbe9Crg.gif">
 
+#### Installation
+Library can be easily installed via either NPM or Bower:
+
+`npm i tinyptyper --save`
+
+OR
+
+`bower i tinytyper --save`
+
 #### Usage
 
 Basic setup looks like this:
