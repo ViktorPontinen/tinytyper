@@ -2,7 +2,7 @@
   "name": "tinytyper",
   "version": "0.0.1",
   "description": "A tiny library for creating typing effect on specified text element",
-  "author": "Korney Vasilchenko",
+  "author": "Korney Vasilchenko <starkkor@gmail.com>",
   "homepage": "https://github.com/lourenc/tinytyper#readme",
   "repository": {
     "type": "git",
@@ -44,8 +44,9 @@
   "scripts": {
     "build": "webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
-    "test": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js -r jsdom-global/register",
-    "lint": "eslint src",
+    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js -r jsdom-global/register",
+    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js -r jsdom-global/register",
+    "lint": "eslint .",
     "pretest": "npm run build"
   }
 }
