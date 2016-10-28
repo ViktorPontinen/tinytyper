@@ -9,7 +9,7 @@
 #### Installation
 Library can be easily installed via either NPM or Bower:
 
-`npm i tinyptyper --save`
+`npm i tinytyper --save`
 
 OR
 

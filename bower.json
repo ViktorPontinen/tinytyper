@@ -1,6 +1,6 @@
 {
   "name": "tinytyper",
-  "description": "A tiny library for creating typing effect on specified text element",
+  "description": "A tiny library for creating a typewriter effect on specified text element",
   "main": "lib/tinytyper.js",
   "authors": [
     "Korney Vasilchenko <starkkor@gmail.com>"
