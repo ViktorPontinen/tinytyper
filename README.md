@@ -1,10 +1,14 @@
-## ⌨️  TinyTyper - a tiny library `(2.9kb)` for creating a typing effect on specified text element.
+## ⌨️  TinyTyper - a tiny library for creating a typing effect on specified text element.
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Build Status](https://travis-ci.org/lourenc/tinytyper.svg?branch=develop)](https://travis-ci.org/lourenc/tinytyper)
 [![Dependency Status](https://gemnasium.com/badges/github.com/lourenc/tinytyper.svg)](https://gemnasium.com/github.com/lourenc/tinytyper)
 
 #### Demo
 <img align="center" src="http://g.recordit.co/8MTkbe9Crg.gif">
+
+#### Size (It's really tiny)
+  - Minimized: 2.9KB
+  - Gziped:    1.1KB
 
 #### Installation
 Library can be easily installed via either NPM or Bower:
