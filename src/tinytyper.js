@@ -17,7 +17,7 @@ class TinyTyper {
    * @param  {Element} el
    * @param  {Object} options
    */
-  constructor (el, options) {
+  constructor (el, options = {}) {
     this.element = el
     this.cursor  = document.createElement('span')
     this.textEl  = document.createElement('span')
@@ -38,6 +38,7 @@ class TinyTyper {
    */
   init () {
     this.element.innerHTML = ''
+    this.element.innerText = ''
     this.element.appendChild(this.textEl)
     this.element.appendChild(this.cursor)
     if (!this.options.staticCursor) this.blinker = blink(this.cursor, this.options.blinkSpeed || 0.05)

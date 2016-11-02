@@ -3,7 +3,7 @@
 import assert from 'assert'
 import { fadeOut, fadeIn } from '../src/blinker'
 
-describe('fadeOut()', () => {
+describe('Fade-out effect', () => {
   const el = document.createElement('div')
 
   before(done => fadeOut(el, 0.05, done))
@@ -12,7 +12,7 @@ describe('fadeOut()', () => {
   })
 })
 
-describe('fadeIn()', () => {
+describe('Fade-in effect', () => {
   const el = document.createElement('div')
 
   before(done => fadeIn(el, 0.05, done))
