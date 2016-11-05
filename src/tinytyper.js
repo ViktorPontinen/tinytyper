@@ -1,15 +1,10 @@
 /**
+ * @module TinyTyper
  * @author Korney Vasilchenko
  */
 'use strict'
 
 import blink from './blinker'
-
-/**
- * Properties symbols for private field
- * @type {Symbol}
- */
-const text = Symbol()
 
 class TinyTyper {
   /**
@@ -23,7 +18,7 @@ class TinyTyper {
     this.textEl  = document.createElement('span')
     this.options = options
 
-    this[text] = options.text || el.innerText
+    this.text = options.text || el.innerText
 
     /* Clear element's content and set default text */
     this.textEl.className = options.textClass || 'tiny-typer-text'
@@ -68,22 +63,6 @@ class TinyTyper {
    */
   redraw (text) {
     this.textEl.innerText = text
-  }
-
-  /**
-   * Sets text for dispaying
-   * @param  {String} text
-   */
-  set text (text) {
-    this[text] = text
-  }
-
-  /**
-   * Text getter
-   * @return {String}
-   */
-  get text () {
-    return this[text]
   }
 }
 
