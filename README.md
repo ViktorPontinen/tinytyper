@@ -1,4 +1,5 @@
 ## ⌨️  TinyTyper - a tiny library for creating a typing effect on specified text element.
+[![npm version](https://badge.fury.io/js/tinytyper.svg)](https://badge.fury.io/js/tinytyper)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Build Status](https://travis-ci.org/lourenc/tinytyper.svg?branch=develop)](https://travis-ci.org/lourenc/tinytyper)
 [![Dependency Status](https://gemnasium.com/badges/github.com/lourenc/tinytyper.svg)](https://gemnasium.com/github.com/lourenc/tinytyper)
