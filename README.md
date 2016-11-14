@@ -53,3 +53,7 @@ Option        | Default      | Description
 #### Contributions
 
 Contributions are welcome. Feel free to create [issues](https://github.com/lourenc/tinytyper/issues) and [PRs](https://github.com/lourenc/tinytyper/pulls)
+
+#### License
+
+MIT
