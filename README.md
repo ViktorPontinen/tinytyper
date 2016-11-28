@@ -8,8 +8,8 @@
 <img align="center" src="http://g.recordit.co/8MTkbe9Crg.gif">
 
 #### Size (It's really tiny)
-  - Minimized: 2.9KB
-  - Gziped:    1.1KB
+  - *Minimized: 2.9KB*
+  - *Gziped:    1.1KB*
 
 #### Installation
 Library can be easily installed via either NPM or Bower:
