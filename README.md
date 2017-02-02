@@ -5,7 +5,7 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/lourenc/tinytyper.svg)](https://gemnasium.com/github.com/lourenc/tinytyper)
 
 #### Demo
-<img align="center" src="http://g.recordit.co/8MTkbe9Crg.gif">
+<img align="center" src="https://s28.postimg.org/4qva5c1f1/tinytyper2.gif">
 
 #### Size (It's really tiny)
   - *Minimized: 2.9KB*
