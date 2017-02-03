@@ -42,7 +42,7 @@ Available `options`:
 Option        | Default      | Description
 ------------- | -------------|--------------
 `text`        | `innerText` of specifed `el`ement | Sets a text to be displayed
-`textSpeed`   | `95`           | Defines of text speed animation
+`textSpeed`   | `95`           | Defines text speed animation
 `cursor`      | ` &#9612;`   | Defines current cursor symbol
 `blinkSpeed`  | `0.05`         | Defines blink speed of a cursor
 `cursorClass` | `tiny-typer-cursor` | A CSS class for cursor element
