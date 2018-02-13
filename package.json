@@ -21,7 +21,7 @@
 		"blinking"
 	],
 	"license": "MIT",
-	"main": "dist/vue-tiny-typer.js",
+	"main": "dist/vue-tinytyper.min.js",
 	"devDependencies": {
 		"babel-core": "^6.26.0",
 		"babel-loader": "^7.1.2",
@@ -33,6 +33,7 @@
 		"webpack-merge": "^4.1.1"
 	},
 	"scripts": {
-		"build": "yarn run rimraf ./dist && webpack --config ./webpack.config.js"
+		"cleanbuild": "yarn run rimraf ./dist && webpack --config ./webpack.config.js",
+		"build": "yarn run webpack --config ./webpack.config.js"
 	}
 }

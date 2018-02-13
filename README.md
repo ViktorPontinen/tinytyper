@@ -1,58 +1,63 @@
-## ⌨️  TinyTyper - a tiny library for creating a typing effect on specified text element.
-[![npm version](https://badge.fury.io/js/tinytyper.svg)](https://badge.fury.io/js/tinytyper)
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Build Status](https://travis-ci.org/lourenc/tinytyper.svg?branch=develop)](https://travis-ci.org/lourenc/tinytyper)
-[![Dependency Status](https://gemnasium.com/badges/github.com/lourenc/tinytyper.svg)](https://gemnasium.com/github.com/lourenc/tinytyper)
+## VueTinyTyper - a vue component for creating a typing effect element.
+
+#### Credits
+This project is forked from https://github.com/lourenc/tinytyper
+Some parts of the readme are also originally from above repository.
+
+#### Why
+This project was created because I was missing events in non-vue version.
 
 #### Demo
 <img align="center" src="https://s28.postimg.org/4qva5c1f1/tinytyper2.gif">
 
-#### Size (It's really tiny)
-  - *Minimized: 2.9KB*
-  - *Gziped:    1.1KB*
-
 #### Installation
-Library can be easily installed via either NPM or Bower:
+Library can be easily installed via either Yarn or NPM:
 
-`npm i tinytyper --save`
-
+`npm i vue-tinytyper --save`
 OR
-
-`bower i tinytyper --save`
+`yarn add vue-tinytyper`
 
 #### Usage
 
 Basic setup looks like this:
 
 ```js
-import TinyTyper from 'tinytyper';
-
-const el       = document.querySelector('.text-el')
-const options  = { /* . . . */ }
-const instance = new TinyTyper(el, options)
+import VueTinytyper from 'vue-tinytyper';
 ```
-
-In case you need to run animation again: 
+THEN
 ```js
-instance.animate()
+<vue-tinytyper text="Hello, please type this out."></vue-tinytyper>
+```
+OR
+```js
+<vue-tinytyper>Hello, please type this out.</vue-tinytyper>
 ```
 
-Available `options`:
+Available `props`:
 
-Option        | Default      | Description
-------------- | -------------|--------------
-`text`        | `innerText` of specifed `el`ement | Sets a text to be displayed
-`textSpeed`   | `95`           | Defines text speed animation
-`cursor`      | ` &#9612;`   | Defines current cursor symbol
-`blinkSpeed`  | `0.05`         | Defines blink speed of a cursor
-`cursorClass` | `tiny-typer-cursor` | A CSS class for cursor element
-`textClass`   | `tiny-typer-text` | A CSS class for text element
-`staticCursor`| `false` | Makes cursor static (disables blinking)
-`staticText`  | `false` | Makes text static (disables animation)
+Prop           | Default      | Type | Description
+---------------- | ------------- | ----------- | --------------
+`text`           | ``           | String | The text to animate
+`textSpeed`      | `95`         | Number | Defines text speed animation
+`cursor`         | `&#9612;`   | String | Defines current cursor symbol
+`blinkSpeed`     | `0.05`       | Number | Defines blink speed of a cursor
+`containerClass` | 'tiny-typer-container'  | String | A CSS class for the container element
+`cursorClass`    | `tiny-typer-cursor` | String | A CSS class for cursor element
+`textClass`      | `tiny-typer-text` | String | A CSS class for text element
+`staticCursor`   | `false` | Boolean | Makes cursor static (disables blinking)
+`staticText`     | `false` | Boolean | Makes text static (disables animation)
+`customEvents`   | `{}`   | Object  | Pass custom "on-character" events. Example: `{ '!': 'my-event' }`, where the event 'my-event' will be triggered every time the current animation character matches the object key, eg. "!".
+
+
+Available `events`
+
+Eventname     | Trigger    | Payload
+------------- | ---------- | ----------
+`animation-finished` | When animation doesn't have any more characters to animate | None
 
 #### Contributions
 
-Contributions are welcome. Feel free to create [issues](https://github.com/lourenc/tinytyper/issues) and [PRs](https://github.com/lourenc/tinytyper/pulls)
+Contributions are welcome. Feel free to create [issues](https://github.com/ViktorPontinen/vue-tinytyper/issues) and [PRs](https://github.com/ViktorPontinen/vue-tinytyper/pulls)
 
 #### License
 
