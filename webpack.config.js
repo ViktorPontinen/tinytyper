@@ -1,55 +1,55 @@
-'use strict'
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-const webpack        = require('webpack')
-const path           = require('path')
-const env            = require('yargs').argv.mode
+var commonConfig = {
+	output: {
+		path: path.resolve(__dirname + '/dist/'),
+	},
+	module: {
+		loaders: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+				  loader: 'babel-loader',
+				  options: {
+					presets: ['env']
+				  }
+				}
+			},
+			{
+				test: /\.vue$/,
+				loader: 'vue-loader'
+			}
+		]
+	},
+	plugins: [
+		new UglifyJsPlugin()
+	]
+};
 
-/* misc staff */
-const LiveReloadPlugin = require('webpack-livereload-plugin')
-const UglifyJsPlugin   = webpack.optimize.UglifyJsPlugin
-const libraryName      = 'tinytyper'
-const plugins          = []
+module.exports = [
 
-let outputFile       = ''
+	// Config 1: For browser environment
+	merge(commonConfig, {
+		entry: path.resolve(__dirname + '/src/plugin.js'),
+		output: {
+			filename: 'vue-tiny-typer.min.js',
+			libraryTarget: 'window',
+			library: 'VueTinyTyper'
+		}
+	}),
 
-
-if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({ minimize: true }))
-  outputFile = libraryName + '.min.js'
-} else {
-  plugins.push(new LiveReloadPlugin())
-  outputFile = libraryName + '.js'
-}
-
-const config = {
-  entry: __dirname + '/src/index.js',
-  devtool: 'source-map',
-  output: {
-    path: __dirname + '/lib',
-    filename: outputFile,
-    library: libraryName,
-    libraryTarget: 'umd',
-    umdNamedDefine: true
-  },
-  module: {
-    loaders: [
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: 'babel',
-        exclude: /(node_modules|bower_components)/
-      },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
-        exclude: /node_modules/
-      }
-    ]
-  },
-  resolve: {
-    root: path.resolve('./src'),
-    extensions: ['', '.js']
-  },
-  plugins: plugins
-}
-
-module.exports = config
+	// Config 2: For Node-based development environments
+	merge(commonConfig, {
+		entry: path.resolve(__dirname + '/src/VueTinyTyper.vue'),
+		output: {
+			filename: 'vue-tiny-typer.js',
+			libraryTarget: 'umd',
+			library: 'vue-tiny-typer',
+			umdNamedDefine: true
+		}
+	})
+];

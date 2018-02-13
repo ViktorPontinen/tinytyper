@@ -1,52 +1,38 @@
 {
-  "name": "tinytyper",
-  "version": "0.1.0",
-  "description": "A tiny library for creating a typewriter effect on specified text element",
-  "author": "Korney Vasilchenko <starkkor@gmail.com>",
-  "homepage": "https://github.com/lourenc/tinytyper#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lourenc/tinytyper.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lourenc/tinytyper/issues"
-  },
-  "keywords": [
-    "typing",
-    "text",
-    "effect",
-    "cursor",
-    "blinking"
-  ],
-  "license": "MIT",
-  "main": "lib/tinytyper.js",
-  "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.18.0",
-    "babel-eslint": "^7.0.0",
-    "babel-loader": "^6.2.5",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.18.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.8.1",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-loader": "^1.6.0",
-    "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "jsdom": "^9.8.3",
-    "jsdom-global": "^2.1.0",
-    "mocha": "^3.1.2",
-    "webpack": "^1.13.3",
-    "webpack-livereload-plugin": "^0.9.0",
-    "yargs": "^6.3.0"
-  },
-  "scripts": {
-    "build": "webpack --mode=build",
-    "dev": "webpack --progress --colors --watch --mode=dev",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js -r jsdom-global/register",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js -r jsdom-global/register",
-    "lint": "eslint .",
-    "pretest": "npm run build"
-  }
+	"name": "vue-tinytyper",
+	"version": "1.0.0",
+	"description": "A tiny library for creating a typewriter effect on specified text element",
+	"author": "Viktor Pöntinen <viktor.pontinen@gmail.com>",
+	"homepage": "https://github.com/ViktorPontinen/vue-tinytyper",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ViktorPontinen/vue-tinytyper.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ViktorPontinen/vue-tinytyper/issues"
+	},
+	"keywords": [
+		"vue",
+		"component",
+		"typing",
+		"text",
+		"effect",
+		"cursor",
+		"blinking"
+	],
+	"license": "MIT",
+	"main": "dist/vue-tiny-typer.js",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-env": "^1.6.1",
+		"rimraf": "^2.6.2",
+		"uglifyjs-webpack-plugin": "^1.1.8",
+		"vue-loader": "^14.1.1",
+		"webpack": "^3.11.0",
+		"webpack-merge": "^4.1.1"
+	},
+	"scripts": {
+		"build": "yarn run rimraf ./dist && webpack --config ./webpack.config.js"
+	}
 }
