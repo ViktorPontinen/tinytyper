@@ -40,11 +40,11 @@ Available `props`:
 
 Prop           | Default      | Type | Description
 ---------------- | ------------- | ----------- | --------------
-`text`           | ``           | String | The text to animate
+`text`           |  `""`          | String | The text to animate
 `textSpeed`      | `95`         | Number | Defines text speed animation
 `cursor`         | `&#9612;`   | String | Defines current cursor symbol
 `blinkSpeed`     | `0.05`       | Number | Defines blink speed of the cursor
-`containerClass` | 'tiny-typer-container'  | String | A CSS class for the container element
+`containerClass` | `tiny-typer-container`  | String | A CSS class for the container element
 `cursorClass`    | `tiny-typer-cursor` | String | A CSS class for cursor element
 `textClass`      | `tiny-typer-text` | String | A CSS class for text element
 `staticCursor`   | `false` | Boolean | Makes cursor static (disables blinking)
@@ -57,6 +57,12 @@ Available `events`
 Eventname     | Trigger    | Payload
 ------------- | ---------- | ----------
 `animation-finished` | When animation doesn't have any more characters to animate | None
+
+#### Known Issues, TODOs and Wishlist
+* Whitespaces are not preserved in the text string.
+* `\n` is typed out instead of creating a new line.
+* Add support for pausing and resuming animation.
+* Add support for triggering events on a combination of characters or words.
 
 #### Contributions
 
